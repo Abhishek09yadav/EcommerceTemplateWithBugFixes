@@ -44,7 +44,7 @@ const useCouponSubmit = (id) => {
       const couponData = {
         title: {
           ...titleTranslates,
-          [language]: title,
+          [language]: data.title,
         },
         couponCode: data.couponCode,
         endTime: data.endTime,
