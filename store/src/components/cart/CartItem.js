@@ -19,7 +19,7 @@ const CartItem = ({ item, currency }) => {
       <div className="relative flex rounded-full border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 cursor-pointer mr-4">
         <img
           key={item.id}
-          src={item.image}
+          src={item.image[0]}
           width={40}
           height={40}
           alt={item.title}
