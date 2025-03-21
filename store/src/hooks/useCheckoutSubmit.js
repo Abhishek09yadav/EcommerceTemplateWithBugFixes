@@ -298,7 +298,7 @@ const useCheckoutSubmit = (storeSetting) => {
             razorpaySignature: response.razorpay_signature,
           };
 
-          const orderData = { ...orderInfo, razorpay: razorpayDetails, car };
+          const orderData = { ...orderInfo, razorpay: razorpayDetails };
           const orderResponse = await OrderServices.addRazorpayOrder(orderData);
           await handleOrderSuccess(orderResponse, orderInfo);
         },
@@ -383,7 +383,7 @@ const useCheckoutSubmit = (storeSetting) => {
 
       if (total < result[0]?.minimumAmount) {
         notifyError(
-          `Minimum ${result[0].minimumAmount} USD required for Apply this coupon!`
+          `Minimum ${result[0].minimumAmount} ₹ required for Apply this coupon!`
         );
         return;
       } else {
